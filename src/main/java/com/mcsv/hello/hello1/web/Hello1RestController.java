@@ -11,7 +11,7 @@ public class Hello1RestController {
 	
 	@GetMapping("/hello/{id}")
 	public String helloWorld(@PathVariable Integer id) {		
-		return "Hello World " + id;
+		return "Hello World  V1 " + id;
 	}
 	
 }
