@@ -23,7 +23,12 @@ public class Hello1RestController {
 	}
 	 */
 	@GetMapping("/welcome")
-	public String welcome(@RequestParam(defaultValue = "Stranger") String name){
+		public String welcome(@RequestParam(defaultValue = "Stranger") String name1){
+			return hello1Service.getWelcomeMessage(name1);
+	}
+
+	@GetMapping("/hello")
+	public String hello(@RequestParam(defaultValue = "Hello") String name){
 		return hello1Service.getWelcomeMessage(name);
 	}
 
